@@ -1,0 +1,14 @@
+{
+  "name": "blog.bedlamhotel.com",
+  "version": "0.1.0",
+  "description": "Blog for Bedlamhotel Internet Services",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Christopher Torgalson",
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "grunt": "~0.4.5"
+  }
+}
