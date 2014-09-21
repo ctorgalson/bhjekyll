@@ -1,14 +1,22 @@
 module.exports = function(grunt) {
   grunt.initConfig({
     copy: {
-      js: {
+      build: {
         files: [
           {
+            // Foundation scss:
+            expand: true,
+            cwd: 'bower_components/foundation/scss/foundation/',
+            src: '_settings.scss',
+            dest: '_scss/',
+            filter: 'isFile'
+          },
+          {
+            // Foundation js:
             expand: true,
             cwd: 'bower_components/foundation/js/vendor/',
             src: '**',
             dest: 'js/',
-            flatten: true,
             filter: 'isFile'
           }
         ]
@@ -16,5 +24,5 @@ module.exports = function(grunt) {
     }
   })
   grunt.loadNpmTasks("grunt-contrib-copy");
-  grunt.registerTask("default", ["copy"]);
+  grunt.registerTask("build", ["copy:build"]);
 }
