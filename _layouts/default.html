@@ -1,44 +1,47 @@
 <!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<!--[if IE 10]><html class="ie10" lang="en" > <![endif]-->
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{{ page.title }}</title>
-        <meta name="viewport" content="width=device-width">
-
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
-
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
-
-    </head>
-    <body>
-
-        <div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            <a class="extra" href="/">home</a>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }} | {{ site.name }}</title>
+{% include head_common.html %}
+  </head>
+  <body>
+{% include nav_common.html %}
+    <div class="wrapper">
+      <div id="main-content">
+        <div class="row">
+          <div class="large-9 columns medium-9 push-3">
+            {{ content }}
           </div>
-
-          {{ content }}
-
-          <div class="footer">
-            <div class="contact">
-              <p>
-                Your Name<br />
-                What You Are<br />
-                you@example.com
-              </p>
-            </div>
-            <div class="contact">
-              <p>
-                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
-                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
-              </p>
-            </div>
+          <div class="large-3 columns medium-3 pull-9">
+            [ Placeholder ]
           </div>
         </div>
-
-    </body>
+      </div>
+    </div>
+    <footer>
+      <div class="row">
+        <div class="columns medium-3 push-9">
+          <ul class="inline-list right">
+            <li><a href="https://drupal.org/u/bedlam">drupal.org</a></li>
+            <li><a href="https://github.com/ctorgalson">github.com</a></li>
+            <li><a href="https://twitter.com/bedlamhotel"><i class="fi-social-twitter"></i>twitter.com</a></li>
+          </ul>
+        </div>
+        <div class="columns medium-2 pull-3"> 
+          <a href="/" class="word-mark">{{ site.name }}</a>
+        </div>
+        <div class="columns medium-7 pull-3">
+          <ul class="inline-list">
+            <li><a href="/blog">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+{% include script_common.html %}
+  </body>
 </html>
