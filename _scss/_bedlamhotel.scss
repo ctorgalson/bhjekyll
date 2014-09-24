@@ -1,0 +1,37 @@
+$h1-font-family: Enriqueta, Georgia, Serif;
+$h1-font-weight: normal;
+$fi-path: "./fonts";
+
+body {
+  background: $jet;
+}
+
+h1 {
+  font-family: $h1-font-family;
+  font-weight: $h1-font-weight;
+}
+
+.wrapper {
+  background: $white;
+}
+
+footer {
+  margin: 0;
+  max-width: 100%;
+  &>.row {
+    max-width: 100%;
+  }
+  .word-mark {
+    font-family: $h1-font-family;
+    font-size: $h5-font-size;
+    font-weight: normal;
+  }
+}
+
+#main-content {
+  &>.row {
+    .medium-9 {
+    }
+  }
+}
+
