@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "dependencies": {
     "foundation": "~5.4.4",
-    "foundation-icon-fonts": "~3.0.0"
+    "foundation-icon-fonts": "*",
+    "responsiveiframe": "*"
   }
 }
