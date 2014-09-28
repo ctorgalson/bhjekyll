@@ -71,6 +71,13 @@ module.exports = function(grunt) {
             src: '**',
             dest: 'js/',
             filter: 'isFile'
+          },
+          {
+            // Responsive iframe js:
+            expand: true,
+            cwd: 'bower_components/responsiveiframe/dist/',
+            src: 'jquery.responsiveiframe.min.js',
+            dest: 'js/'
           }
         ]
       }
