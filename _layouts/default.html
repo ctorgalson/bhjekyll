@@ -10,38 +10,25 @@
   <body>
 {% include nav_common.html %}
     <div class="wrapper">
+      <div id="masthead">
+        <div class="row">
+          <div class="large-9 columns medium-9 push-3">
+            <h1>{{ page.title }}</h1>
+          </div>
+        </div>
+      </div>
       <div id="main-content">
         <div class="row">
           <div class="large-9 columns medium-9 push-3">
             {{ content }}
           </div>
           <div class="large-3 columns medium-3 pull-9">
-            [ Placeholder ]
+            <p class="meta">{{ page.date | date: '%B %d, %Y' }}</p>
           </div>
         </div>
       </div>
     </div>
-    <footer>
-      <div class="row">
-        <div class="columns medium-3 push-9">
-          <ul class="inline-list right">
-            <li><a href="https://drupal.org/u/bedlam">drupal.org</a></li>
-            <li><a href="https://github.com/ctorgalson">github.com</a></li>
-            <li><a href="https://twitter.com/bedlamhotel"><i class="fi-social-twitter"></i>twitter.com</a></li>
-          </ul>
-        </div>
-        <div class="columns medium-2 pull-3"> 
-          <a href="/" class="word-mark">{{ site.name }}</a>
-        </div>
-        <div class="columns medium-7 pull-3">
-          <ul class="inline-list">
-            <li><a href="/blog">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/contact">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </footer>
+    {% include footer_common.html %}
 {% include script_common.html %}
   </body>
 </html>
