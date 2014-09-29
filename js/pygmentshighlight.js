@@ -1,25 +1,4 @@
 /**
- * Contact form modal link--makes any link to contact form a link to a modal
- * in the page *if* there's javascript (not much sense doing this otherwise...)
- *
- * Does not attempt to rewrite links if this *is* the contact page.
- */
-var pathname = '/contact.html';
-if (window.location.pathname !== pathname) {
-  $('a[href="' + pathname + '"').attr({'data-reveal-id': 'contact-modal'});
-}
-
-
-/**
- * A kind of small progressive enhancement; the markup just contains the
- * two words, but here we smush them together and enclose the second
- * word in a span in order to be able to style it separately.
- */
-var $wordMarks = $('.title-area h1, footer h1');
-$wordMarks.html($wordMarks.html().replace(/( )(hotel)/i, '<span>$2</span>'));
-
-
-/**
  * Pygments is great, but showing line numbers while enabling the
  * reader to copy the text is problematic (the table option is kind of
  * mediocre for styling reasons...) This jquery works around this.
