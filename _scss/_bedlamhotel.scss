@@ -1,0 +1,216 @@
+// Override values from _settings (and other partials), and create new ones:
+//
+// New variables:
+//
+// Note: mixin-specific variables defined in mixins.
+$h1-font-family: "Fjalla One", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$h1-font-weight: normal;
+$vim-highlight: #163949;
+$vim-titlebar: #93a1a1;
+// Overrides:
+$fi-path: "../fonts"; // _foundation-icions.scss
+
+// Mixins:
+@mixin word-mark {
+  // Colours:
+  $link: $smoke;
+  $link-hover: $white;
+  $link-alt: $aluminum;
+  $link-alt-hover: $iron;
+  $symbol: $link-alt;
+  $symbol-hover: $primary-color;
+  // h1:
+  font-family: $h1-font-family;
+  font-size: $h5-font-size;
+  font-weight: normal;
+  line-height: $topbar-height;
+  position: relative;
+  text-transform: uppercase;
+  // Link (contains icon and span):
+  a {
+    color: $link;
+    float: left;
+    height: inherit;
+    padding: 0;
+    &:hover,
+    &:active,
+    &:focus {
+      color: $link-hover;
+      span {
+        color: $link-alt-hover;
+      }
+      i {
+        color: $symbol-hover;  
+        float: left;
+      }
+    }
+    // Icon:
+    i {
+      @include rotate(90deg);
+      color: $symbol; 
+      float: left;
+      font-size: inherit;
+      line-heighr: inherit;
+    }
+    // Word-mark 'alt':
+    span {
+      color: $link-alt;
+    }
+  }
+}
+
+
+// Elements:
+body {
+  background: $jet;
+}
+
+h1 {
+  font-family: $h1-font-family;
+  font-weight: $h1-font-weight;
+}
+
+
+// Page sections:
+.top-bar .name,
+footer {
+  h1 {
+    @include word-mark;
+  }
+}
+
+.top-bar {}
+
+.wrapper {
+  background: $silver;
+  padding: 0 0 rem-calc(24) 0;
+}
+
+#masthead {
+  background: $secondary-color;
+  color: $white;
+  margin-bottom: rem-calc(24);
+  padding: rem-calc(24) 0;
+  h1 {
+    @include text-shadow(0px 0px 2px $oil);
+    color: inherit;
+  }
+  .meta {
+    color: inherit;
+  }
+}
+
+#main-content {}
+
+.teaser {
+  color: $oil; 
+  font-weight: bold;
+}
+
+footer {
+  margin: 0 auto;
+  max-width: 80%;
+  padding-bottom: 1.5em;
+  padding-top: 1.5em;
+  a {
+    color: $aluminum; 
+    &:hover,
+    &:active,
+    &:focus {
+      color: $iron;
+    }
+  }
+  &>.row {
+    max-width: 100%;
+  }
+  h1 {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  .footer-social,
+  .footer-menu {
+    margin-bottom: 0;
+    a {
+      line-height: rem-calc(45);  
+    }
+  }
+  .footer-social {
+    a {
+      font-size: rem-calc(30);
+      &:hover,
+      &:active,
+      &:focus {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+
+// Content:
+
+// Contact form
+//
+// Tweaks to foundation form & modal styles:
+.contact-form {
+  
+}
+
+// Pygments
+//
+// Undo some of the aggravating things Foundation does to Pygments:
+.highlight {
+  overflow-x: scroll;
+  margin: 0 0 rem-calc(24) 0;
+  padding: 0 !important;
+  pre {
+    border-bottom: rem-calc(12) solid $secondary-color;
+    border-top: rem-calc(12) solid $secondary-color;
+  }
+  code {
+    background: transparent;
+    border-style: none;
+    padding: 0;
+  }
+  // Make the Solarized Pygments variant we're using even a bit more like vim:
+  .lineno {
+    background: $vim-highlight;
+    padding: rem-calc(3) .4em; 
+  }
+}
+
+.plain {
+  pre {
+    background: $white;
+    color: $oil; 
+  }
+}
+
+
+// Foundation:
+.tabs {
+  dd {
+    &:first-child {
+      margin-right: .125em;
+    }
+    a {
+      border-bottom: 1px solid $silver;
+      padding-bottom: rem-calc(4);
+      padding-top: rem-calc(4);
+    }
+  }
+  .active {
+    a {
+      border-bottom-color: $secondary-color;
+      box-shadow: none;
+    }
+  }
+  .tabs-content {
+    margin-bottom: 0;
+  }
+}
+
+// Recaptcha:
+#recaptcha_table {
+  width: 100%;
+} 

@@ -1,0 +1,15 @@
+/* THANKS--tools and resources used in this site */
+  Bower: http://bower.io/
+  CSS Font Stack: http://cssfontstack.com/
+  Compass: 
+  Ethan Schoonover: (Solarized palette) http://ethanschoonover.com/solarized
+  Google Fonts: https://www.google.com/fonts
+  Grunt: http://gruntjs.com/
+  Jekyll: http://jekyllrb.com/
+  jQuery: 
+  Modernizr: 
+  Pygments: http://pygments.org/
+  SASS: 
+  Quint Guvernator: (tweaked Solarized Pygments CSS) https://gist.github.com/qguv/7936275/ 
+  Sorkin Type: (Fjalla font) http://sorkintype.com/
+  Zurb: (Foundation, Icon fonts) http://foundation.zurb.com

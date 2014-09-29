@@ -41,16 +41,43 @@ module.exports = function(grunt) {
             expand: true,
             cwd: 'bower_components/foundation/scss/foundation/',
             src: '_settings.scss',
-            dest: '_scss/',
-            filter: 'isFile'
+            dest: '_scss/'
+          },
+          {
+            // Foundation icon scss:
+            expand: true,
+            cwd: 'bower_components/foundation-icon-fonts/',
+            src: '_foundation-icons.scss',
+            dest: '_scss/'
+          },
+          {
+            // Foundation icons:
+            expand: true,
+            cwd: 'bower_components/foundation-icon-fonts/',
+            src: ['foundation-icons.eot', 'foundation-icons.svg', 'foundation-icons.ttf', 'foundation-icons.woff'],
+            dest: 'fonts/'
           },
           {
             // Foundation js:
+            expand: true,
+            cwd: 'bower_components/foundation/js/',
+            src: ['foundation.min.js'],
+            dest: 'js/'
+          },
+          {
+            // Foundation vendor js:
             expand: true,
             cwd: 'bower_components/foundation/js/vendor/',
             src: '**',
             dest: 'js/',
             filter: 'isFile'
+          },
+          {
+            // Responsive iframe js:
+            expand: true,
+            cwd: 'bower_components/responsiveiframe/dist/',
+            src: 'jquery.responsiveiframe.min.js',
+            dest: 'js/'
           }
         ]
       }
