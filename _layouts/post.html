@@ -2,7 +2,12 @@
 layout: default
 ---
 <div class="large-9 columns medium-9 push-3">
-  {{ content }}
+  <section>
+    {{ content }}
+  </section>
+  <section>
+  {% include disqus.html %}
+  </section>
 </div>
 <div class="large-3 columns medium-3 pull-9">
   <aside class="meta">

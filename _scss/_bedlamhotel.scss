@@ -211,6 +211,9 @@ footer {
 }
 
 // Recaptcha:
+#recaptcha_widget_div {
+  margin-bottom: rem-calc(24);
+}
 #recaptcha_table {
   width: 100%;
 } 

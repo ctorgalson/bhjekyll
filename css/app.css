@@ -6237,6 +6237,9 @@ footer {
 .tabs .tabs-content {
   margin-bottom: 0; }
 
+#recaptcha_widget_div {
+  margin-bottom: 1.5rem; }
+
 #recaptcha_table {
   width: 100%; }
 
