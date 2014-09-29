@@ -19,16 +19,16 @@
       </div>
       <div id="main-content">
         <div class="row">
-          <div class="large-9 columns medium-9 push-3">
-            {{ content }}
-          </div>
-          <div class="large-3 columns medium-3 pull-9">
-            <p class="meta">{{ page.date | date: '%B %d, %Y' }}</p>
-          </div>
+          {{ content }}
         </div>
       </div>
     </div>
     {% include footer_common.html %}
+    <div id="contact-modal" class="reveal-modal small" data-reveal>
+      <h1>Get in touch&hellip;</h1>      
+      {% include contact_common.html %}
+      <a class="close-reveal-modal">&#215;</a>
+    </div>
 {% include script_common.html %}
   </body>
 </html>

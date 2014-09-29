@@ -1,11 +1,14 @@
 ---
 layout: default
 ---
-<section>
-  <!--<h1>{{ page.title }}</h1>-->
-  <!--<p class="meta">{{ page.date | date_to_string }}</p>-->
-
-  <div class="post">
+<div class="large-9 columns medium-9 push-3">
   {{ content }}
-  </div>
-</section>
+</div>
+<div class="large-3 columns medium-3 pull-9">
+  <aside class="meta">
+    <h2>{{ page.categories }}</h2>
+    <p class="teaser">{{ page.teaser }}</p>
+    <p class="date">{{ page.date | date: '%B %d, %Y' }}</p>
+  </aside>
+</div>
+
