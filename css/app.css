@@ -6118,6 +6118,18 @@ h1 {
   font-family: "Fjalla One", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal; }
 
+h2,
+h3,
+h4 {
+  font-family: "Fjalla One", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #555555; }
+  h2:hover, h2:focus,
+  h3:hover,
+  h3:focus,
+  h4:hover,
+  h4:focus {
+    color: #333333; }
+
 .top-bar .name h1,
 footer h1 {
   font-family: "Fjalla One", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -6176,6 +6188,9 @@ footer h1 {
     color: inherit; }
   #masthead .meta {
     color: inherit; }
+
+.post-sidebar {
+  text-align: right; }
 
 .teaser {
   color: #333333;

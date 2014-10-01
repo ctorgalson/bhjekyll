@@ -1,25 +1,4 @@
 /**
- * Contact form modal link--makes any link to contact form a link to a modal
- * in the page *if* there's javascript (not much sense doing this otherwise...)
- *
- * Does not attempt to rewrite links if this *is* the contact page.
- */
-var pathname = '/contact.html';
-if (window.location.pathname !== pathname) {
-  $('a[href="' + pathname + '"').attr({'data-reveal-id': 'contact-modal'});
-}
-
-
-/**
- * A kind of small progressive enhancement; the markup just contains the
- * two words, but here we smush them together and enclose the second
- * word in a span in order to be able to style it separately.
- */
-var $wordMarks = $('.title-area h1, footer h1');
-$wordMarks.html($wordMarks.html().replace(/( )(hotel)/i, '<span>$2</span>'));
-
-
-/**
  * Foundation-Pygments Plain Text plugin
  *
  * Pygments is great, but showing line numbers while enabling the
@@ -66,23 +45,21 @@ $.fn.fpPlainText = function ($element, overrides) {
     $tabsNav
       // Build and append the highlight tab:
       .append(
-        $(settings.highlightTab)
-          .attr({
-            href: '#' + pygmentsId,
-            controls: pygmentsId
-          })
-          .wrap(settings.highlightWrap)
-          .parent()
+        $(settings.highlightTab).attr({
+          href: '#' + pygmentsId,
+          controls: pygmentsId
+        })
+        .wrap(settings.highlightWrap)
+        .parent()
       )
       // Likewise for the plaintext tab:
       .append(
-        $(settings.plaintextTab)
-          .attr({
-            href: '#' + plaintextId,
-            controls: plaintextId
-          })
-          .wrap(settings.plaintextWrap)
-          .parent()
+        $(settings.plaintextTab).attr({
+          href: '#' + plaintextId,
+          controls: plaintextId
+        })
+        .wrap(settings.plaintextWrap)
+        .parent()
       )
       .insertBefore($current);
     // Go to work on the current element; we need to add Foundation tabs
@@ -118,6 +95,3 @@ $.fn.fpPlainText = function ($element, overrides) {
       .wrapAll(settings.tabsContentWrap);
   });
 }; /* $fn.fpPlainText */
-
-
-$('.highlight').fpPlainText();
