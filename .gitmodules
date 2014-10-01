@@ -1,0 +1,6 @@
+[submodule "_submodules/jquery.bhwordmark.js"]
+	path = _submodules/jquery.bhwordmark.js
+	url = https://github.com/ctorgalson/jquery.bhwordmark.js.git
+[submodule "_submodules/jquery.fpplaintext.js"]
+	path = _submodules/jquery.fpplaintext.js
+	url = https://github.com/ctorgalson/jquery.fpplaintext.js.git
