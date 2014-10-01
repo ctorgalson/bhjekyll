@@ -62,8 +62,8 @@ Dive into BIND (though if you already know BIND, you probably don't need this po
 
 It's just not quite as convenient. If you're a [Cloudflare][cloudflare] user&mdash;which means you'll be managing your DNS there&mdash;you can
 also export your DNS settings, though there's no convenient tool that I
-know of for interacting directly with the DNS zone files. So, if you're
-willing to manually download and override your files (see **Method 1: it's better than screenshots**, above), you've got a reasonably convenient way to back up and manage your DNS zone files.
+know of for interacting directly with the DNS zones via the command line. So, if you're
+willing to manually download and override your files (see *Method 1: it's better than screenshots*, above), you've got a reasonably convenient way to back up and manage your DNS zone files.
 
 [bindformat]: https://en.wikipedia.org/wiki/Zone_file
 [route53]:    https://aws.amazon.com/route53
