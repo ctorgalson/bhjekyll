@@ -79,6 +79,9 @@ h4 {
   &:focus {
     color: $oil;
   }
+  strong {
+    border-bottom: rem-calc(3px) solid $secondary-color;
+  }
 }
 
 
