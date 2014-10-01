@@ -80,7 +80,8 @@ module.exports = function(grunt) {
             '_bower_components/fastclick/lib/fastclick.js',
             '_bower_components/foundation/js/foundation.min.js',
             '_submodules/jquery.fpplaintext.js/scripts/jquery.fpplaintext.min.js',
-            '_submodules/jquery.bhwordmark.js/scripts/jquery.bhwordmark.min.js'
+            '_submodules/jquery.bhwordmark.js/scripts/jquery.bhwordmark.min.js',
+            '_submodules/jquery.ajaxreveallinks.js/scripts/jquery.ajaxreveallinks.min.js'
           ]
         }
       }
