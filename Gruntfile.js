@@ -57,35 +57,6 @@ module.exports = function(grunt) {
             cwd: 'bower_components/foundation-icon-fonts/',
             src: ['foundation-icons.eot', 'foundation-icons.svg', 'foundation-icons.ttf', 'foundation-icons.woff'],
             dest: 'fonts/'
-          },
-          {
-            // Foundation js:
-            expand: true,
-            cwd: 'bower_components/foundation/js/',
-            src: ['foundation.min.js'],
-            dest: 'js/'
-          },
-          {
-            // Foundation vendor js:
-            expand: true,
-            cwd: 'bower_components/foundation/js/vendor/',
-            src: '**',
-            dest: 'js/',
-            filter: 'isFile'
-          },
-          {
-            // Responsive iframe js:
-            expand: true,
-            cwd: 'bower_components/responsiveiframe/dist/',
-            src: 'jquery.responsiveiframe.min.js',
-            dest: 'js/'
-          },
-          {
-            // Pygments-Foundation plaintext js:
-            expand: true,
-            cwd: 'bower_components/foundation-pygments-plain-text/scripts/',
-            src: 'jquery.fpplaintext.js',
-            dest: 'js/'
           }
         ]
       }
@@ -106,9 +77,10 @@ module.exports = function(grunt) {
         files: {
           'js/app.js': [
             'bower_components/jquery/dist/jquery.min.js',
+            'bower_components/jquery.cookie/jquery.cookie.js',
             'bower_components/fastclick/lib/fastclick.js',
-            'bower_components/foundation/js/foundation.min.js'
-
+            'bower_components/foundation/js/foundation.min.js',
+            '_submodules/jquery.fpplaintext.js/scripts/jquery.fpplaintext.min.js'
           ]
         }
       }
