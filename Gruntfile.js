@@ -30,6 +30,7 @@ module.exports = function(grunt) {
       dev: [
         'compass:dev',
         'exec:serve',
+        'uglify',
         'watch'
       ]
     },
@@ -97,6 +98,21 @@ module.exports = function(grunt) {
         cmd: 'jekyll serve --watch'
       }
     },
+    uglify: {
+      options: {
+        mangle: false
+      },
+      js: {
+        files: {
+          'js/app.js': [
+            'bower_components/jquery/dist/jquery.min.js',
+            'bower_components/fastclick/lib/fastclick.js',
+            'bower_components/foundation/js/foundation.min.js'
+
+          ]
+        }
+      }
+    },
     watch: {
       css: {
         files: [
@@ -129,6 +145,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks("grunt-contrib-copy");
   grunt.loadNpmTasks('grunt-exec');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   // Tasks:
   grunt.registerTask("build", ["copy:build"]);
