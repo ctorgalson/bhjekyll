@@ -4,3 +4,6 @@
 [submodule "_submodules/jquery.fpplaintext.js"]
 	path = _submodules/jquery.fpplaintext.js
 	url = https://github.com/ctorgalson/jquery.fpplaintext.js.git
+[submodule "_submodules/jquery.ajaxreveallinks.js"]
+	path = _submodules/jquery.ajaxreveallinks.js
+	url = https://github.com/ctorgalson/jquery.ajaxreveallinks.js.git
