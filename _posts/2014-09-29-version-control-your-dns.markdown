@@ -47,7 +47,7 @@ Avoid working with BIND directly:
    example.com.txt`;
 4. Commit and push changes.
 
-### Method 3: if BIND is *not* scary
+### Method 3: if BIND is **not** scary
 
 Dive into BIND (though if you already know BIND, you probably don't need this post):
 
