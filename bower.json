@@ -2,6 +2,7 @@
   "name": "blog.bedlamhotel.com",
   "version": "0.1.0",
   "dependencies": {
+    "foundation-pygments-plain-text": "*",
     "foundation": "~5.4.4",
     "foundation-icon-fonts": "*"
   }

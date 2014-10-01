@@ -78,6 +78,13 @@ module.exports = function(grunt) {
             cwd: 'bower_components/responsiveiframe/dist/',
             src: 'jquery.responsiveiframe.min.js',
             dest: 'js/'
+          },
+          {
+            // Pygments-Foundation plaintext js:
+            expand: true,
+            cwd: 'bower_components/foundation-pygments-plain-text/scripts/',
+            src: 'jquery.fpplaintext.js',
+            dest: 'js/'
           }
         ]
       }
