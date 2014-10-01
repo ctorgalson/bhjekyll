@@ -3,5 +3,9 @@
  * two words, but here we smush them together and enclose the second
  * word in a span in order to be able to style it separately.
  */
-var $wordMarks = $('.title-area h1, footer h1');
-$wordMarks.html($wordMarks.html().replace(/( )(hotel)/i, '<span>$2</span>'));
+$.fn.bhWordMark = function () {
+  return this.each(function () {
+    var $current = $(this);
+    $current.html($current.html().replace(/()(hotel)/i, '<span>$2</span>'));
+  });
+}; /* $.fn.bhWordMark */
