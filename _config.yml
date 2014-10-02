@@ -1,3 +1,4 @@
 name: Bedlam Hotel
 markdown: redcarpet
 pygments: true
+paginate: 2
