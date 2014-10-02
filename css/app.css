@@ -6145,9 +6145,10 @@ footer h1 {
   .top-bar .name h1 a,
   footer h1 a {
     color: #EEEEEE;
-    float: left;
+    display: inline-block;
     height: inherit;
-    padding: 0; }
+    padding: 0;
+    position: relative; }
     .top-bar .name h1 a:hover, .top-bar .name h1 a:active, .top-bar .name h1 a:focus,
     footer h1 a:hover,
     footer h1 a:active,
@@ -6162,8 +6163,7 @@ footer h1 {
       footer h1 a:hover i,
       footer h1 a:active i,
       footer h1 a:focus i {
-        color: #259b24;
-        float: left; }
+        color: #259b24; }
     .top-bar .name h1 a i,
     footer h1 a i {
       -moz-transform: rotate(90deg);
@@ -6171,7 +6171,7 @@ footer h1 {
       -webkit-transform: rotate(90deg);
       transform: rotate(90deg);
       color: #999999;
-      float: left;
+      display: inline-block;
       font-size: inherit;
       line-heighr: inherit; }
     .top-bar .name h1 a span,
@@ -6180,21 +6180,32 @@ footer h1 {
 
 .wrapper {
   background: #EFEFEF;
-  padding: 0 0 1.5rem 0; }
+  border-bottom: 1px solid #999999;
+  padding: 0; }
 
 #masthead {
   background: #ff5722;
+  border-bottom: 1px solid #999999;
   color: #FFFFFF;
-  margin-bottom: 1.5rem;
-  padding: 1.5rem 0; }
+  margin-bottom: 0;
+  padding: 1.25rem 0; }
   #masthead h1 {
     text-shadow: 0px 0px 2px #333333;
     color: inherit; }
   #masthead .meta {
     color: inherit; }
 
+#main-content {
+  border-bottom: 1px solid #FFFFFF;
+  border-top: 1px solid #FFFFFF;
+  padding-bottom: 1.25rem;
+  padding-top: 1.25rem; }
+
 .post-sidebar {
+  color: #999999;
   text-align: right; }
+  .post-sidebar aside h2, .post-sidebar aside p {
+    color: #888888; }
 
 .teaser {
   color: #333333;
@@ -6203,8 +6214,8 @@ footer h1 {
 footer {
   margin: 0 auto;
   max-width: 80%;
-  padding-bottom: 1.5em;
-  padding-top: 1.5em; }
+  padding-bottom: 1.25rem;
+  padding-top: 1.25rem; }
   footer a {
     color: #999999; }
     footer a:hover, footer a:active, footer a:focus {
@@ -6212,8 +6223,10 @@ footer {
   footer > .row {
     max-width: 100%; }
   footer h1 {
+    left: -0.625rem;
     margin-bottom: 0;
-    margin-top: 0; }
+    margin-top: 0;
+    position: relative; }
   footer .footer-social,
   footer .footer-menu {
     margin-bottom: 0; }
@@ -6226,22 +6239,26 @@ footer {
       color: #259b24; }
 
 .highlight {
-  overflow-x: scroll;
-  margin: 0 0 1.5rem 0;
+  border-bottom: 0.625rem solid #ff5722;
+  border-top: 0.625rem solid #ff5722;
+  margin: 0;
   padding: 0 !important; }
   .highlight pre {
-    border-bottom: 0.75rem solid #ff5722;
-    border-top: 0.75rem solid #ff5722; }
+    border-bottom: 1.25rem solid #002b36;
+    border-top: 1.25rem solid #002b36;
+    overflow-x: scroll; }
   .highlight code {
     background: transparent;
     border-style: none;
     padding: 0; }
   .highlight .lineno {
     background: #163949;
-    padding: 0.1875rem 0.4em; }
+    padding: 0.1875rem 0.4em;
+    z-index: 10; }
 
 .plain pre {
   background: #FFFFFF;
+  border-color: #FFFFFF;
   color: #333333; }
 
 .tabs dd:first-child {
@@ -6254,14 +6271,41 @@ footer {
   border-bottom-color: #ff5722;
   box-shadow: none; }
 .tabs .tabs-content {
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  padding-bottom: 0; }
 
 #recaptcha_widget_div {
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1.25rem; }
 
 #recaptcha_table {
   width: 100%; }
 
+@media only screen and (max-width: 40em) {
+  footer h1 {
+    text-align: center; }
+    footer h1 a {
+      float: none !important;
+      margin: 0 auto; }
+  footer .footer-social {
+    float: none !important;
+    margin: 0 auto;
+    max-width: 8.4375rem; }
+    footer .footer-social > li {
+      max-width: 2.8125rem;
+      margin: 0; }
+    footer .footer-social a {
+      width: 2.8125rem; }
+  footer .footer-menu {
+    margin: 0;
+    text-align: center; }
+    footer .footer-menu li {
+      display: inline;
+      float: none !important;
+      margin: 0 1em 0 0; }
+      footer .footer-menu li:last-child {
+        margin-right: 0; }
+      footer .footer-menu li a {
+        display: inline; } }
 /* 
  * Foundation Icons v 3.0
  * Made by ZURB 2013 http://zurb.com/playground/foundation-icon-fonts-3
