@@ -66,7 +66,7 @@ module.exports = function(grunt) {
         cmd: 'jekyll build'
       },
       serve: {
-        cmd: 'jekyll serve --watch'
+        cmd: 'jekyll serve --drafts --watch'
       }
     },
     uglify: {
