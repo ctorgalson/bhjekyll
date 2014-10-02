@@ -5,6 +5,7 @@
 // Note: mixin-specific variables defined in mixins.
 $h1-font-family: "Fjalla One", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $h1-font-weight: normal;
+$vim-background: #002b36;
 $vim-highlight: #163949;
 $vim-titlebar: #93a1a1;
 // Overrides:
@@ -29,9 +30,10 @@ $fi-path: "../fonts"; // _foundation-icions.scss
   // Link (contains icon and span):
   a {
     color: $link;
-    float: left;
+    display: inline-block;
     height: inherit;
     padding: 0;
+    position: relative;
     &:hover,
     &:active,
     &:focus {
@@ -41,14 +43,13 @@ $fi-path: "../fonts"; // _foundation-icions.scss
       }
       i {
         color: $symbol-hover;  
-        float: left;
       }
     }
     // Icon:
     i {
       @include rotate(90deg);
       color: $symbol; 
-      float: left;
+      display: inline-block;
       font-size: inherit;
       line-heighr: inherit;
     }
@@ -97,14 +98,16 @@ footer {
 
 .wrapper {
   background: $silver;
-  padding: 0 0 rem-calc(24) 0;
+  border-bottom: 1px solid $aluminum;
+  padding: 0;
 }
 
 #masthead {
   background: $secondary-color;
+  border-bottom: 1px solid $aluminum;
   color: $white;
-  margin-bottom: rem-calc(24);
-  padding: rem-calc(24) 0;
+  margin-bottom: 0;
+  padding: $paragraph-margin-bottom 0;
   h1 {
     @include text-shadow(0px 0px 2px $oil);
     color: inherit;
@@ -114,10 +117,21 @@ footer {
   }
 }
 
-#main-content {}
+#main-content {
+  border-bottom: 1px solid $white;
+  border-top: 1px solid $white;
+  padding-bottom: $paragraph-margin-bottom;
+  padding-top: $paragraph-margin-bottom;
+}
 
 .post-sidebar {
+  color: $aluminum; 
   text-align: right;
+  aside {
+    h2, p {
+      color: $jumbo;
+    }
+  }
 }
 
 .teaser {
@@ -128,8 +142,8 @@ footer {
 footer {
   margin: 0 auto;
   max-width: 80%;
-  padding-bottom: 1.5em;
-  padding-top: 1.5em;
+  padding-bottom: $paragraph-margin-bottom;
+  padding-top: $paragraph-margin-bottom;
   a {
     color: $aluminum; 
     &:hover,
@@ -142,8 +156,10 @@ footer {
     max-width: 100%;
   }
   h1 {
+    left: rem-calc(-10);
     margin-bottom: 0;
     margin-top: 0;
+    position: relative;
   }
   .footer-social,
   .footer-menu {
@@ -177,13 +193,18 @@ footer {
 // Pygments
 //
 // Undo some of the aggravating things Foundation does to Pygments:
+// Consider using a custom parser.
+//
+// @see http://blog.leonardfactory.com/2013/05/05/code-fenced-blocks-pygments-and-line-numbers-with-jekyll/
 .highlight {
-  overflow-x: scroll;
-  margin: 0 0 rem-calc(24) 0;
+  border-bottom: ($paragraph-margin-bottom / 2) solid $secondary-color;
+  border-top: ($paragraph-margin-bottom / 2) solid $secondary-color;
+  margin: 0;
   padding: 0 !important;
   pre {
-    border-bottom: rem-calc(12) solid $secondary-color;
-    border-top: rem-calc(12) solid $secondary-color;
+    border-bottom: $paragraph-margin-bottom solid $vim-background;
+    border-top: $paragraph-margin-bottom solid $vim-background;
+    overflow-x: scroll;
   }
   code {
     background: transparent;
@@ -194,12 +215,14 @@ footer {
   .lineno {
     background: $vim-highlight;
     padding: rem-calc(3) .4em; 
+    z-index: 10;
   }
 }
 
 .plain {
   pre {
     background: $white;
+    border-color: $white;
     color: $oil; 
   }
 }
@@ -225,13 +248,55 @@ footer {
   }
   .tabs-content {
     margin-bottom: 0;
+    padding-bottom: 0;
   }
 }
 
 // Recaptcha:
 #recaptcha_widget_div {
-  margin-bottom: rem-calc(24);
+  margin-bottom: $paragraph-margin-bottom;
 }
 #recaptcha_table {
   width: 100%;
 } 
+
+//
+
+@media #{$small-only} {
+  footer {
+    h1 {
+      text-align: center;
+      a {
+        float: none !important;
+        margin: 0 auto;
+      }
+    }
+    .footer-social {
+      float: none !important; 
+      margin: 0 auto;
+      max-width: rem-calc(45 * 3);
+      &>li {
+        max-width: rem-calc(45);
+        margin: 0;
+      } 
+      a {
+        width: rem-calc(45);
+      }
+    }
+    .footer-menu {
+      margin: 0;
+      text-align: center;
+      li {
+        display: inline;
+        float: none !important;
+        margin: 0 1em 0 0;
+        &:last-child {
+          margin-right: 0;
+        }
+        a {
+          display: inline;
+        }
+      }
+    }
+  }
+}
