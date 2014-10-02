@@ -73,7 +73,7 @@ module.exports = function(grunt) {
       options: {
         mangle: false
       },
-      js: {
+      site: {
         files: {
           'js/app.js': [
             '_bower_components/jquery/dist/jquery.min.js',
@@ -82,14 +82,19 @@ module.exports = function(grunt) {
             '_submodules/jquery.fpplaintext.js/scripts/jquery.fpplaintext.min.js',
             '_submodules/jquery.bhwordmark.js/scripts/jquery.bhwordmark.min.js',
             '_submodules/jquery.ajaxreveallinks.js/scripts/jquery.ajaxreveallinks.min.js'
-          ]
+          ],
+          //'css/app.css': [
+            //'css/custom.css'
+            //,
+            //'css/solarized-dark.css'
+          //]
         }
       }
     },
     watch: {
       css: {
         files: [
-          '_site/assets/css/*.css'
+          '_site/css/*.css'
         ],
         options: {
           livereload: false
