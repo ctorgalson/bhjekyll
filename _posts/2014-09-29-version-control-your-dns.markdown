@@ -4,7 +4,8 @@ title:  "Version control your DNS (!)"
 date:   2014-09-29 13:00:00
 categories: Maintenance
 tags: route53 git dns Cloudflare 
-teaser: Manage DNS for small sites using git, Route 53, and cli53
+teaser: "Manage DNS for small sites using git, Route 53, and cli53"
+published: true
 ---
 
 ## DNS can be hard to keep track of&hellip;
