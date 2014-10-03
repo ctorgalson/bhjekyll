@@ -71,7 +71,8 @@ module.exports = function(grunt) {
     },
     uglify: {
       options: {
-        mangle: false
+        // This should exclude jquery and modernizr, but doesn't :)
+        mangle: true
       },
       site: {
         files: {
@@ -82,12 +83,7 @@ module.exports = function(grunt) {
             '_submodules/jquery.fpplaintext.js/scripts/jquery.fpplaintext.min.js',
             '_submodules/jquery.bhwordmark.js/scripts/jquery.bhwordmark.min.js',
             '_submodules/jquery.ajaxreveallinks.js/scripts/jquery.ajaxreveallinks.min.js'
-          ],
-          //'css/app.css': [
-            //'css/custom.css'
-            //,
-            //'css/solarized-dark.css'
-          //]
+          ]
         }
       }
     },
