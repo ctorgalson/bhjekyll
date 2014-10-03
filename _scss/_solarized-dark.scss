@@ -1,0 +1,176 @@
+/**
+ * This is a sass-ized version of a pygments-ized version of a css-ized
+ * version of the dark version of the solarzed colour scheme.
+ *
+ * @see https://gist.githubusercontent.com/qguv/7936275/raw/36691eeebfc6b708cae1ea4227e147a5a0ef5afe/solarized-dark.css
+ */
+
+/* Solarized Dark 
+
+For use with Jekyll and Pygments
+
+http://ethanschoonover.com/solarized
+
+SOLARIZED HEX      ROLE
+--------- -------- ------------------------------------------
+base03    #002b36  background
+base01    #586e75  comments / secondary content
+base1     #93a1a1  body text / default code / primary content
+orange    #cb4b16  constants
+red       #dc322f  regex, special keywords
+blue      #268bd2  reserved keywords
+cyan      #2aa198  strings, numbers
+green     #859900  operators, other keywords
+*/
+
+$solarized-base03:  #002b36;
+$solarized-base01:  #586e75;
+$solarized-base1:   #93a1a1;
+$solarized-orange:  #cb4b16;
+$solarized-red:     #dc322f;
+$solarized-blue:    #268bd2;
+$solarized-cyan:    #2aa198;
+$solarized-green:   #859900;
+$solarized-other:   #b58900; // This is a leftover or an error...
+
+.highlight { background-color: $solarized-base03; color: $solarized-base1 }
+
+// Line Numbers:
+.highlight .lineno { color: $solarized-base01 } 
+// Comment:
+.highlight .c { color: $solarized-base01 } 
+// Error:
+.highlight .err { color: $solarized-base1 } 
+// Generic:
+.highlight .g { color: $solarized-base1 } 
+// Keyword:
+.highlight .k { color: $solarized-green } 
+// Literal:
+.highlight .l { color: $solarized-base1 } 
+// Name:
+.highlight .n { color: $solarized-base1 } 
+// Operator:
+.highlight .o { color: $solarized-green } 
+// Other:
+.highlight .x { color: $solarized-orange } 
+// Punctuation:
+.highlight .p { color: $solarized-base1 } 
+// Comment.Multiline:
+.highlight .cm { color: $solarized-base01 } 
+// Comment.Preproc:
+.highlight .cp { color: $solarized-green } 
+// Comment.Single:
+.highlight .c1 { color: $solarized-base01 } 
+// Comment.Special:
+.highlight .cs { color: $solarized-green } 
+// Generic.Deleted:
+.highlight .gd { color: $solarized-cyan } 
+// Generic.Emph:
+.highlight .ge { color: $solarized-base1; font-style: italic } 
+// Generic.Error:
+.highlight .gr { color: $solarized-red } 
+// Generic.Heading:
+.highlight .gh { color: $solarized-orange } 
+// Generic.Inserted:
+.highlight .gi { color: $solarized-green } 
+// Generic.Output:
+.highlight .go { color: $solarized-base1 } 
+// Generic.Prompt:
+.highlight .gp { color: $solarized-base1 } 
+// Generic.Strong:
+.highlight .gs { color: $solarized-base1; font-weight: bold } 
+// Generic.Subheading:
+.highlight .gu { color: $solarized-orange } 
+// Generic.Traceback:
+.highlight .gt { color: $solarized-base1 } 
+// Keyword.Constant:
+.highlight .kc { color: $solarized-orange } 
+// Keyword.Declaration:
+.highlight .kd { color: $solarized-blue } 
+// Keyword.Namespace:
+.highlight .kn { color: $solarized-green } 
+// Keyword.Pseudo:
+.highlight .kp { color: $solarized-green } 
+// Keyword.Reserved:
+.highlight .kr { color: $solarized-blue } 
+// Keyword.Type:
+.highlight .kt { color: $solarized-red } 
+// Literal.Date:
+.highlight .ld { color: $solarized-base1 } 
+// Literal.Number:
+.highlight .m { color: $solarized-cyan } 
+// Literal.String:
+.highlight .s { color: $solarized-cyan } 
+// Name.Attribute:
+.highlight .na { color: $solarized-base1 } 
+// Name.Builtin:
+.highlight .nb { color: $solarized-other } 
+// Name.Class:
+.highlight .nc { color: $solarized-blue } 
+// Name.Constant:
+.highlight .no { color: $solarized-orange } 
+// Name.Decorator:
+.highlight .nd { color: $solarized-blue } 
+// Name.Entity:
+.highlight .ni { color: $solarized-orange } 
+// Name.Exception:
+.highlight .ne { color: $solarized-orange } 
+// Name.Function:
+.highlight .nf { color: $solarized-blue } 
+// Name.Label:
+.highlight .nl { color: $solarized-base1 } 
+// Name.Namespace:
+.highlight .nn { color: $solarized-base1 } 
+// Name.Other:
+.highlight .nx { color: $solarized-base1 } 
+// Name.Property:
+.highlight .py { color: $solarized-base1 } 
+// Name.Tag:
+.highlight .nt { color: $solarized-blue } 
+// Name.Variable:
+.highlight .nv { color: $solarized-blue } 
+// Operator.Word:
+.highlight .ow { color: $solarized-green } 
+// Text.Whitespace:
+.highlight .w { color: $solarized-base1 } 
+// Literal.Number.Float:
+.highlight .mf { color: $solarized-cyan } 
+// Literal.Number.Hex:
+.highlight .mh { color: $solarized-cyan } 
+// Literal.Number.Integer:
+.highlight .mi { color: $solarized-cyan } 
+// Literal.Number.Oct:
+.highlight .mo { color: $solarized-cyan } 
+// Literal.String.Backtick:
+.highlight .sb { color: $solarized-base01 } 
+// Literal.String.Char:
+.highlight .sc { color: $solarized-cyan } 
+// Literal.String.Doc:
+.highlight .sd { color: $solarized-base1 } 
+// Literal.String.Double:
+.highlight .s2 { color: $solarized-cyan } 
+// Literal.String.Escape:
+.highlight .se { color: $solarized-orange } 
+// Literal.String.Heredoc:
+.highlight .sh { color: $solarized-base1 } 
+// Literal.String.Interpol:
+.highlight .si { color: $solarized-cyan } 
+// Literal.String.Other:
+.highlight .sx { color: $solarized-cyan } 
+// Literal.String.Regex:
+.highlight .sr { color: $solarized-red } 
+// Literal.String.Single:
+.highlight .s1 { color: $solarized-cyan } 
+// Literal.String.Symbol:
+.highlight .ss { color: $solarized-cyan } 
+// Name.Builtin.Pseudo:
+.highlight .bp { color: $solarized-blue } 
+// Name.Variable.Class:
+.highlight .vc { color: $solarized-blue } 
+// Name.Variable.Global:
+.highlight .vg { color: $solarized-blue } 
+// Name.Variable.Instance:
+.highlight .vi { color: $solarized-blue } 
+// Literal.Number.Integer.Long:
+.highlight .il { color: $solarized-cyan } 
+
