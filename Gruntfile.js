@@ -10,14 +10,15 @@ module.exports = function(grunt) {
         importPath: '_bower_components/foundation/scss',
         javascriptsDir: 'js',
         noLineComments: true,
-        outputStyle: 'nested',
+        outputStyle: 'compressed',
         relativeAssets: true,
         sassDir: '_scss',
         watch: false
       },
       dev: {
         options: {
-          outputStyle: 'nested',
+          environment: 'production',
+          outputStyle: 'compressed',
           watch: true
         }
       }
@@ -84,6 +85,10 @@ module.exports = function(grunt) {
             '_submodules/jquery.bhwordmark.js/scripts/jquery.bhwordmark.min.js',
             '_submodules/jquery.ajaxreveallinks.js/scripts/jquery.ajaxreveallinks.min.js'
           ]
+          //,
+          //'css/app.css': [
+          //  'css/app.css'
+          //]
         }
       }
     },

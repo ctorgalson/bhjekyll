@@ -1,27 +1,25 @@
 /**
+ * Solarized Dark 
+ *
  * This is a sass-ized version of a pygments-ized version of a css-ized
  * version of the dark version of the solarzed colour scheme.
  *
+ * For use with Jekyll and Pygments
+ *
+ * @see http://ethanschoonover.com/solarized
  * @see https://gist.githubusercontent.com/qguv/7936275/raw/36691eeebfc6b708cae1ea4227e147a5a0ef5afe/solarized-dark.css
+ *
+ * SOLARIZED HEX      ROLE
+ * --------- -------- ------------------------------------------
+ * base03    #002b36  background
+ * base01    #586e75  comments / secondary content
+ * base1     #93a1a1  body text / default code / primary content
+ * orange    #cb4b16  constants
+ * red       #dc322f  regex, special keywords
+ * blue      #268bd2  reserved keywords
+ * cyan      #2aa198  strings, numbers
+ * green     #859900  operators, other keywords
  */
-
-/* Solarized Dark 
-
-For use with Jekyll and Pygments
-
-http://ethanschoonover.com/solarized
-
-SOLARIZED HEX      ROLE
---------- -------- ------------------------------------------
-base03    #002b36  background
-base01    #586e75  comments / secondary content
-base1     #93a1a1  body text / default code / primary content
-orange    #cb4b16  constants
-red       #dc322f  regex, special keywords
-blue      #268bd2  reserved keywords
-cyan      #2aa198  strings, numbers
-green     #859900  operators, other keywords
-*/
 
 $solarized-base03:  #002b36;
 $solarized-base01:  #586e75;
@@ -31,7 +29,8 @@ $solarized-red:     #dc322f;
 $solarized-blue:    #268bd2;
 $solarized-cyan:    #2aa198;
 $solarized-green:   #859900;
-$solarized-other:   #b58900; // This is a leftover or an error...
+// This is a leftover or an error:
+$solarized-other:   #b58900; 
 
 .highlight { background-color: $solarized-base03; color: $solarized-base1 }
 
@@ -173,4 +172,3 @@ $solarized-other:   #b58900; // This is a leftover or an error...
 .highlight .vi { color: $solarized-blue } 
 // Literal.Number.Integer.Long:
 .highlight .il { color: $solarized-cyan } 
-
