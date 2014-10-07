@@ -1,0 +1,5 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTP_HOST} ^www.bedlamhotel.com$
+  RewriteRule (.*)$ https://bedlamhotel.com/$1 [R=302,L]
+</IfModule>
