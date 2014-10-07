@@ -1,3 +1,4 @@
+exclude: [node_modules]
 name: Bedlam Hotel
 markdown: redcarpet
 pygments: true
