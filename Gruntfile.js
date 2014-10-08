@@ -84,7 +84,7 @@ module.exports = function(grunt) {
             'bower_components/foundation/js/foundation.min.js',
             '_submodules/jquery.fpplaintext.js/scripts/jquery.fpplaintext.min.js',
             '_submodules/jquery.bhwordmark.js/scripts/jquery.bhwordmark.min.js',
-            '_submodules/jquery.ajaxreveallinks.js/scripts/jquery.ajaxreveallinks.min.js'
+            '_submodules/jquery.ajaxreveallinks.js/scripts/jquery.ajaxreveallinks.min.js',
             '_submodules/jquery.cookiesplease.js/scripts/jquery.cookiesplease.min.js'
           ]
         }
