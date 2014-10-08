@@ -73,7 +73,7 @@ module.exports = function(grunt) {
     uglify: {
       options: {
         // This should exclude jquery and modernizr, but doesn't :)
-        mangle: true
+        mangle: false
       },
       site: {
         files: {
