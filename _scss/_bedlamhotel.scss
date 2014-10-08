@@ -194,9 +194,12 @@ footer {
 // Cookie alert:
 .alert-box {
   margin-top: $paragraph-margin-bottom * -1;
-  padding-left: 0;
-  padding-right: 0;
+  padding: ($paragraph-margin-bottom / 2) 0;
+  text-align: center;
   width: 100%;
+  button {
+    margin-bottom: 0;
+  }
 }
 
 // Pygments
@@ -272,6 +275,20 @@ footer {
 //
 
 @media #{$small-only} {
+  .alert-box.cookies-please {
+    button {
+      @include button(
+        $radius: true,
+        $full-width: true
+      );
+      margin: ($paragraph-margin-bottom / 2) 0;
+    }
+  }
+  #i-hate-cookies {
+    @include button(
+      $bg: $alert-color
+    );
+  }
   footer {
     h1 {
       text-align: center;
