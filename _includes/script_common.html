@@ -17,9 +17,12 @@
     </script>
     <noscript><p><img src="//stats-bhotel.rhcloud.com/piwik.php?idsite=2" style="border:0;" alt="" /></p></noscript>
     <script>
-      $('.title-area h1, footer h1').bhWordMark();
-      $('.highlight').fpPlainText();
-      $('a[href="/contact.html"]').ajaxRevealLinks('contact-modal', '/ajax/contact_form.html');
+       $(document).ready(function () {
+        $('.title-area h1, footer h1').bhWordMark();
+        $('.highlight').fpPlainText();
+        $('a[href="/contact.html"]').ajaxRevealLinks('contact-modal', '/ajax/contact_form.html');
+        $('.alert-box.cookies-please').hide().cookiesPlease();
+      }); 
       $(document).foundation();
     </script>
 

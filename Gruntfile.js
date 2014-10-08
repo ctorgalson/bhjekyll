@@ -7,7 +7,7 @@ module.exports = function(grunt) {
         fontsDir: 'fonts',
         httpPath: '/',
         imagesDir: 'img',
-        importPath: '_bower_components/foundation/scss',
+        importPath: 'bower_components/foundation/scss',
         javascriptsDir: 'js',
         noLineComments: true,
         outputStyle: 'compressed',
@@ -41,21 +41,21 @@ module.exports = function(grunt) {
           {
             // Foundation scss:
             expand: true,
-            cwd: '_bower_components/foundation/scss/foundation/',
+            cwd: 'bower_components/foundation/scss/foundation/',
             src: '_settings.scss',
             dest: '_scss/'
           },
           {
             // Foundation icon scss:
             expand: true,
-            cwd: '_bower_components/foundation-icon-fonts/',
+            cwd: 'bower_components/foundation-icon-fonts/',
             src: '_foundation-icons.scss',
             dest: '_scss/'
           },
           {
             // Foundation icons:
             expand: true,
-            cwd: '_bower_components/foundation-icon-fonts/',
+            cwd: 'bower_components/foundation-icon-fonts/',
             src: ['foundation-icons.eot', 'foundation-icons.svg', 'foundation-icons.ttf', 'foundation-icons.woff'],
             dest: 'fonts/'
           }
@@ -78,9 +78,10 @@ module.exports = function(grunt) {
       site: {
         files: {
           'js/app.js': [
-            '_bower_components/jquery/dist/jquery.min.js',
-            '_bower_components/fastclick/lib/fastclick.js',
-            '_bower_components/foundation/js/foundation.min.js',
+            'bower_components/jquery/dist/jquery.min.js',
+            'bower_components/fastclick/lib/fastclick.js',
+            'bower_components/jquery.cookie/jquery.cookie.js',
+            'bower_components/foundation/js/foundation.min.js',
             '_submodules/jquery.fpplaintext.js/scripts/jquery.fpplaintext.min.js',
             '_submodules/jquery.bhwordmark.js/scripts/jquery.bhwordmark.min.js',
             '_submodules/jquery.ajaxreveallinks.js/scripts/jquery.ajaxreveallinks.min.js'
