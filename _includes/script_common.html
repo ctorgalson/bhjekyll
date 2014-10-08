@@ -26,7 +26,7 @@
         $('.highlight').fpPlainText();
         $('a[href="/contact.html"]').ajaxRevealLinks('contact-modal', '/ajax/contact_form.html');
         $('.alert-box.cookies-please').hide().cookiesPlease();
-        //
+        // Scripts that run--or not--based on the user's choices re: cookies:
         var cookiesPlease = $.cookie('cookiesPlease');
         if (cookiesPlease === 'no') {
           _paq.push(["disableCookies"]);

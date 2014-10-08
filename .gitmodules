@@ -9,4 +9,4 @@
 	url = https://github.com/ctorgalson/jquery.ajaxreveallinks.js.git
 [submodule "_submodules/jquery.cookiesplease.js"]
 	path = _submodules/jquery.cookiesplease.js
-	url = git@github.com:ctorgalson/jquery.cookiesplease.js.git
+	url = https://github.com/ctorgalson/jquery.cookiesplease.js.git
