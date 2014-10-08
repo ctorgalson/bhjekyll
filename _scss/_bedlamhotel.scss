@@ -64,6 +64,7 @@ $fi-path: "../fonts"; // _foundation-icions.scss
 // Elements:
 body {
   background: $jet;
+  position: relative;
 }
 
 h1 {
@@ -188,6 +189,14 @@ footer {
 // Tweaks to foundation form & modal styles:
 .contact-form {
   
+}
+
+// Cookie alert:
+.alert-box {
+  margin-top: $paragraph-margin-bottom * -1;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
 }
 
 // Pygments
