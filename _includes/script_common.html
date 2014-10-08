@@ -22,6 +22,10 @@
         $('.highlight').fpPlainText();
         $('a[href="/contact.html"]').ajaxRevealLinks('contact-modal', '/ajax/contact_form.html');
         $('.alert-box.cookies-please').hide().cookiesPlease();
+        //
+        if ($.cookie('cookiesPlease') === 'no') {
+          _paq.push(["disableCookies"]);
+        }
       }); 
       $(document).foundation();
     </script>
