@@ -40,11 +40,11 @@ not really suitable for production use. It replaces `settings.php`,
 got no ability to use `drush make` when building Drupal (so you can't
 easily use anything but the default install profiles).
 
-Nonetheless, I was intrigued by a fully open-source platform ([Openshit
+Nonetheless, I was intrigued by a fully open-source platform ([Openshift
 Origin][openshiftorigin]) that's
 reasonably priced, scalable, builds on `git push`, has Jenkins
 integration available, and can get a Drupal site up and running in a
-minute or two. I was also interested in buing able to use the same
+minute or two. I was also interested in being able to use the same
 platform for non-Drupal sites, so I decided to rewrite Openshift's
 Drupal Quickstart.
 
