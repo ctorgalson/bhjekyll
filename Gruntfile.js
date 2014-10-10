@@ -73,6 +73,7 @@ module.exports = function(grunt) {
     uglify: {
       options: {
         // This should exclude jquery and modernizr, but doesn't :)
+        compress: false,
         mangle: false
       },
       site: {
@@ -82,35 +83,38 @@ module.exports = function(grunt) {
             'bower_components/fastclick/lib/fastclick.js',
             'bower_components/jquery.cookie/jquery.cookie.js',
             'bower_components/foundation/js/foundation.min.js',
-            '_submodules/jquery.fpplaintext.js/scripts/jquery.fpplaintext.min.js',
-            '_submodules/jquery.bhwordmark.js/scripts/jquery.bhwordmark.min.js',
             '_submodules/jquery.ajaxreveallinks.js/scripts/jquery.ajaxreveallinks.min.js',
-            '_submodules/jquery.cookiesplease.js/scripts/jquery.cookiesplease.min.js'
+            '_submodules/jquery.bhwordmark.js/scripts/jquery.bhwordmark.min.js',
+            '_submodules/jquery.cookiesplease.js/scripts/jquery.cookiesplease.min.js',
+            '_submodules/jquery.fpplaintext.js/scripts/jquery.fpplaintext.min.js'
           ]
         }
       }
     },
     watch: {
-      css: {
-        files: [
-          '_site/css/*.css'
-        ],
-        options: {
-          livereload: false
-        }
-      },
+      // css: {
+      //   files: [
+      //     'css/*.css'
+      //   ],
+      //   tasks: 'uglify',
+      //   options: {
+      //     livereload: false
+      //   }
+      // },
       html: {
         files: [
-          '_site/**/*.html'
+          '_posts/**/*.html'
         ],
+        tasks: 'uglify',
         options: {
           livereload: false
         }
       },
       js: {
         files: [
-          '_site/js/*.js'
+          '_submodules/*.js'
         ],
+        tasks: 'uglify',
         options: {
           livereload: false
         }

@@ -1,4 +1,4 @@
-exclude: [bower_components, node_modules]
+exclude: [bower.json, bower_components, Gemfile, Gruntfile.js, node_modules, package.json, README.md]
 name: Bedlam Hotel
 markdown: redcarpet
 pygments: true
