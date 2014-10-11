@@ -3,6 +3,7 @@ layout: post
 title: "Test title: welcom to jekyll"
 date: 2014-09-20 13:00:00
 categories: jekyll update
+teaser: foo
 published: true
 ---
 
