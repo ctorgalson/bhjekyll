@@ -14,11 +14,11 @@ layout: none
       <generator>Jekyll</generator>
       <managingEditor>{{ site.email }} ({{ site.publisher }})</managingEditor>
       <webMaster>{{ site.email }} ({{ site.publisher }})</webMaster>
-      <atom:link href="{{ site.url }}feed.xml" rel="self" type="application/rss+xml" />
+      <atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml" />
       {% for post in site.posts limit:20 %}
       <item>
          <title>{{ post.title | xml_escape }}</title>
-         <link>{{ site.url }}/{{ post.url }}</link>
+         <link>{{ site.url }}{{ post.url }}</link>
          <description>{{ post.teaser | xml_escape }}</description>
          <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
          <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
