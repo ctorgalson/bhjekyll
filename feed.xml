@@ -2,7 +2,7 @@
 layout: none
 ---
 <?xml version="1.0"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
    <channel>
       <title>{{ site.name | xml_escape }}</title>
       <link>{{ site.url }}</link>
@@ -12,8 +12,9 @@ layout: none
       <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
       <docs>http://www.rssboard.org/rss-specification</docs>
       <generator>Jekyll</generator>
-      <managingEditor>{{ site.email }}</managingEditor>
-      <webMaster>{{ site.email }}</webMaster>
+      <managingEditor>{{ site.email }} ({{ site.publisher }})</managingEditor>
+      <webMaster>{{ site.email }} ({{ site.publisher }})</webMaster>
+      <atom:link href="{{ site.url }}feed.xml" rel="self" type="application/rss+xml" />
       {% for post in site.posts limit:20 %}
       <item>
          <title>{{ post.title | xml_escape }}</title>

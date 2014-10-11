@@ -1,6 +1,7 @@
 exclude: [bower.json, bower_components, Gemfile, Gruntfile.js, node_modules, package.json, README.md]
 name: Bedlam Hotel
 description: Thoughts on Drupal development and web app maintenance and general web development.
+publisher: Christopher Torgalson
 url: https://bedlamhotel.com
 email: manager@bedlamhotel.com
 markdown: redcarpet
