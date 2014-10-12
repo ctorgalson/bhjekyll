@@ -147,6 +147,7 @@ see it, there are the following disadvantages:
 [drushdeploysession]:   https://amsterdam2014.drupal.org/session/deploying-your-sites-drush
 [pullrequestbuilder]:   https://github.com/Lullabot/jenkins_github_drupal/
 [pullrequestsession]:   https://amsterdam2014.drupal.org/session/github-pull-request-builder-drupal/
+[heroku]:               https://www.heroku.com/
 [herokuphp]:            https://blog.heroku.com/archives/2014/4/29/introducing_the_new_php_on_heroku/
 [redhat]:               http://www.redhat.com/en/
 [openshift]:            https://www.openshift.com/
