@@ -5,5 +5,7 @@ publisher: Christopher Torgalson
 url: https://bedlamhotel.com
 email: manager@bedlamhotel.com
 markdown: redcarpet
-pygments: true
+highlighter: pygments
 paginate: 2
+gems:
+  - jekyll-sitemap
