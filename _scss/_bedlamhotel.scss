@@ -51,7 +51,7 @@ $fi-path: "../fonts"; // _foundation-icions.scss
       color: $symbol; 
       display: inline-block;
       font-size: inherit;
-      line-heighr: inherit;
+      line-height: inherit;
     }
     // Word-mark 'alt':
     span {
@@ -60,6 +60,27 @@ $fi-path: "../fonts"; // _foundation-icions.scss
   }
 }
 
+@mixin icon-tile {
+  background: $jet;
+  height: rem-calc(400);
+  width: rem-calc(400);
+  padding: rem-calc(50);
+  i {
+    @include rotate(90deg);
+    color: $primary-color;
+    display: block;
+    font-size: rem-calc(300);
+    height: 1em;
+    line-height: 1em;
+    position: relative;
+    top: rem-calc(20);
+    width: 1em;
+  }
+}
+
+.icon-tile {
+  @include icon-tile; 
+}
 
 // Elements:
 body {
