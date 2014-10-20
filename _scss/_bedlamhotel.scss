@@ -60,6 +60,7 @@ $fi-path: "../fonts"; // _foundation-icions.scss
   }
 }
 
+// Refactor both this and word mark for multiple sizes:
 @mixin icon-tile {
   background: $jet;
   height: rem-calc(400);
