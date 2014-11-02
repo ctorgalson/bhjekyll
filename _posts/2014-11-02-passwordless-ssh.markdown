@@ -4,8 +4,7 @@ title:  "Passwordless SSH Access"
 date:   2014-11-02 13:00:00
 categories: Maintenance
 tags: ssh development ssh-add ssh-copy-id homebrew osx lastpass
-teaser: "Access your remote server(s) safely without having to memorize
-passwords"
+teaser: "Access your remote server(s) safely without having to use passwords"
 published: true
 ---
 
