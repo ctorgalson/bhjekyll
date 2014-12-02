@@ -175,7 +175,7 @@ using the alias from the config file:
 If you passphrase-protect your keys (as suggested above), you'll need to 
 authenticate before you can use them. This is done with the `ssh-add` command:
 
-`ssh-add .ssh/example`
+`ssh-add ~/.ssh/example`
 
 This produces a dialogue like this:
 
