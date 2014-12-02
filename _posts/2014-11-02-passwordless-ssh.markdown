@@ -160,8 +160,8 @@ terminal in the first place). But besides that, there are a couple of things to 
 
 This is a teriffic side benefit. As development has moved away from the use of 
 FTP, we really don't do as many manual file transfers as we used to. However 
-it's still necessary to transfer a tarball or database dump from a development 
-machine to some remote server.
+it's still sometimes necessary to transfer a tarball, database dump, or other 
+file from a development machine to some remote server.
 
 The safe way to do this is to use SCP. Happily, our passwordless SSH setup works 
 directly with SCP. Using our above example we can transfer a file up or down 
