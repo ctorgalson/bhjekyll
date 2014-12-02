@@ -188,7 +188,7 @@ Identity added: /Users/Username/.ssh/demo_key (/Users/Username/.ssh/demo_key)
 ### Removing access to a remote server
 
 When using passwordless SSH logins, the private key is stored on the local 
-machine, but they public resides on as many servers as the local machine has 
+machine, but the public key resides on as many servers as the local machine has 
 access to. These keys must sometimes be removed if an employee moves, a 
 temporary job finishes, or a client moves on.
 
