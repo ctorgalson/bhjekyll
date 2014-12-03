@@ -74,7 +74,8 @@ module.exports = function(grunt) {
       options: {
         // This should exclude jquery and modernizr, but doesn't :)
         compress: false,
-        mangle: false
+        mangle: false,
+        sourceMap: true
       },
       site: {
         files: {
@@ -85,7 +86,7 @@ module.exports = function(grunt) {
             'bower_components/foundation/js/foundation.min.js',
             '_submodules/jquery.ajaxreveallinks.js/scripts/jquery.ajaxreveallinks.min.js',
             '_submodules/jquery.bhwordmark.js/scripts/jquery.bhwordmark.min.js',
-            '_submodules/jquery.cookiesplease.js/scripts/jquery.cookiesplease.min.js',
+            '_submodules/jquery.cookiesplease.js/dist/jquery.cookiesplease.min.js',
             '_submodules/jquery.fpplaintext.js/scripts/jquery.fpplaintext.min.js'
           ]
         }
